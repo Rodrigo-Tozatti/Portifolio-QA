@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "cypress": "^11.2.0"
+  },
+  "name": "portifolio-qa",
+  "description": "Portifólio dos trabalhos desenvolvidos em automacao de testes",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "devDependencies": {
+    "mochawesome": "^7.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "opency": "npx cypress open",
+    "openrun": "npx cypress run",
+    "openrun-mocha": "npx cypress run --reporter mochawesome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rodrigo-Tozatti/Portifolio-QA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rodrigo-Tozatti/Portifolio-QA/issues"
+  },
+  "homepage": "https://github.com/Rodrigo-Tozatti/Portifolio-QA#readme"
+}
