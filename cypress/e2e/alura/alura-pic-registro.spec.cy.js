@@ -57,24 +57,19 @@ describe('Funcionalidade registro alura pic', () => {
     cy.contains('h4', 'Login').should('be.visible')
   });
 
-  const usuarios = require ('../../fixtures/example.json')
-  usuarios.forEach(usuario => {
-    it.only('Registrando um novo usuario (massa de dados)', () => {
+  const dados_registro = require('../../fixtures/dados_registro.json')
+  dados_registro.forEach(usuarios => {
+    it.only('Registrando um novo usuario (massa de dados)' + usuarios.username, () => {
       cy.contains('a', 'Register now').click()
-      cy.get('input[formcontrolname="email"]').type(email)
-      cy.get('input[formcontrolname="fullName"]').type(fullname)
-      cy.get('input[formcontrolname="userName"]').type(username)
-      cy.get('input[formcontrolname="password"]').type(passworld)
-  
+      cy.get('input[formcontrolname="email"]').type(usuarios.email)
+      cy.get('input[formcontrolname="fullName"]').type(usuarios.fullname)
+      cy.get('input[formcontrolname="userName"]').type(usuarios.username)
+      cy.get('input[formcontrolname="password"]').type(usuarios.passworld)
+
       cy.contains('button', 'Register').click()
       cy.contains('button', 'Register').click()
-  
+
       cy.contains('h4', 'Login').should('be.visible')
     });
-
   })
-
-  
-
-
 })
